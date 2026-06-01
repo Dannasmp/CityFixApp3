@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    command: npm test
